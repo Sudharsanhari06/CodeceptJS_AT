@@ -1,0 +1,32 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1751369097573' stop='1751369107163'>
+    <name>XPath Practice Site:</name>
+    <title>XPath Practice Site:</title>
+    <test-cases>
+        <test-case start='1751369097918' status='failed' stop='1751369107128'>
+            <name>Open XPath Practice Page</name>
+            <title>Open XPath Practice Page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1751369098162' status='failed' stop='1751369107126'>
+                    <name>I am on page "https://www.hyrtutorials.com"</name>
+                    <title>I am on page "https://www.hyrtutorials.com"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>page.goto: Target page, context or browser has been closed</message>
+                <stack-trace>page.goto: Target page, context or browser has been closed
+                    at Playwright.amOnPage (C:\Sudharsan_Lumel\CodeceptJS_AT\node_modules\codeceptjs\lib\helper\Playwright.js:957:21)
+                    at HelperStep.run (C:\Sudharsan_Lumel\CodeceptJS_AT\node_modules\codeceptjs\lib\step\helper.js:28:49)
+                    at C:\Sudharsan_Lumel\CodeceptJS_AT\node_modules\codeceptjs\lib\step\record.js:45:26</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
