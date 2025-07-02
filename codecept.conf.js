@@ -17,13 +17,6 @@ module.exports.config = {
     }
   },
   
-  plugins: {
-    allure: {
-      enabled: true,
-      outputDir: 'output',
-      require: '@codeceptjs/allure-legacy'
-    }
-  },
   include: {
     I: './steps/steps_file.js'
   },
