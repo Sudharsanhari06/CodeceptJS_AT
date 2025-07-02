@@ -16,7 +16,12 @@ module.exports.config = {
       show: true
     }
   },
-  
+  plugins: {
+    allure: {
+      enabled: true,
+      require: "allure-codeceptjs",
+    },
+  },
   include: {
     I: './steps/steps_file.js'
   },
