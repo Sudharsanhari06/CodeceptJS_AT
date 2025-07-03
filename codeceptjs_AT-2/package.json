@@ -1,0 +1,17 @@
+{
+  "devDependencies": {
+    "@codeceptjs/allure-legacy": "^1.0.2",
+    "@codeceptjs/configure": "^0.6.2",
+    "@codeceptjs/examples": "^1.2.1",
+    "@codeceptjs/ui": "^0.4.5",
+    "allure-codeceptjs": "^2.15.1",
+    "codeceptjs": "^3.7.3",
+    "playwright": "^1.53.2"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.53.2",
+    "allure-commandline": "^2.29.0",
+    "codeceptjs-assert": "0.0.4",
+    "codeceptjs-browserlogs-plugin": "^1.0.5"
+  }
+}
