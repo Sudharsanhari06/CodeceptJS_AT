@@ -21,8 +21,6 @@ exports.config = {
     },
 
   },
-
-
   plugins:{
     allure: {
       enabled: true,

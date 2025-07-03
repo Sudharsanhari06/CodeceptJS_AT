@@ -5,6 +5,7 @@ Scenario('open page', async ({ I }) => {
     let region = 'Americas'
     await I.amOnPage('/');
     await tableColor.openInforiver(region);
-    await tableColor.getRowCells(region);
+    await tableColor.verifyRowColor(region,);
+
 })
 
