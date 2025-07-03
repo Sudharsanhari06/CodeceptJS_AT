@@ -1,10 +1,10 @@
-# CodeceptJS Automation Project with Playwright and Allure Report
+## CodeceptJS Automation Project with Playwright and Allure Report
 
 This project automates UI testing of [demoqa.com](https://demoqa.com) using **CodeceptJS** with **Playwright**, and generates visual test reports using **Allure**.
 
 ---
 
-## 📁 Folder Structure
+### Folder Structure
 
 ```
 ├── tests/             → All test scenarios (e.g., user_test.js)
@@ -17,7 +17,7 @@ This project automates UI testing of [demoqa.com](https://demoqa.com) using **Co
 
 ---
 
-##  Project Setup
+### Project Setup
 
 1. **Clone the repository**
 
@@ -34,15 +34,15 @@ npm install
 
 ---
 
-## ▶️ Running Tests
+### Running Tests
 
-### Run all tests with visible browser:
+#### Run all tests with visible browser:
 
 ```bash
 npx codeceptjs run --steps
 ```
 
-### Run tests in headless mode (no browser UI):
+#### Run tests in headless mode (no browser UI):
 
 ```bash
 HEADLESS=true npx codeceptjs run
@@ -50,17 +50,17 @@ HEADLESS=true npx codeceptjs run
 
 ---
 
-##  Example Test Command
+###  Example Test Command
 
 Run a specific test file:
 
 ```bash
-npx codeceptjs run tests/user_test.js --steps
+npx codeceptjs run tests/table_test.js --steps
 ```
 
 ---
 
-## ♻️ Page Object Model (POM)
+### Page Object Model (POM)
 
 All reusable page methods are placed inside the `pages/` folder.  
 Import and use them in your test files for better structure and maintainability.
@@ -74,31 +74,31 @@ tablePage.addNewUser();
 
 ---
 
-## 📊Allure Reporting
+### Allure Reporting
 
-### One-time installation of Allure CLI:
+#### One-time installation of Allure CLI:
 
 ```bash
 npm install -g allure-commandline --save-dev
 ```
 
-### Generate Allure report after test execution:
+#### Generate Allure report after test execution:
 
 ```bash
-allure serve
+allure serve ./allure-results
 ```
 
 >  If `allure serve` fails, you can generate and open the report manually:
 
 ```bash
-allure generate allure-results --clean -o allure-report
+allure generate --clean --single-file allure-results
 ```
 
 Then open `allure-report/index.html` in your browser.
 
 ---
 
-## Summary
+### Summary
 
 - ✅ Built with **CodeceptJS** and **Playwright** for UI test automation  
 - ✅ Uses **Allure** for clean and interactive test reporting  
