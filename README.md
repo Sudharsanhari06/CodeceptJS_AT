@@ -36,29 +36,15 @@ To run tests in headless mode (without opening browser):
 
    HEADLESS=true npx codeceptjs run
 
-==========================
-🧪 Generate Allure Report
-==========================
 
-1. After running tests, generate the report:
-
-   npx allure serve ./allure-results
-
-2. Open the generated report:
-
-   npx allure open allure-report
-
---- OR ---
-
-   npx allure serve allure-results
-
-(This will start a temporary server and open the report in your default browser.)
 
 ==========================
 📦 Example Test Command
 ==========================
 
+Run specific test file:
 
+   npx codeceptjs run tests/user_test.js --steps
 
 ==========================
 🔁 Reusable Page Code (POM)
@@ -76,7 +62,7 @@ If you haven’t installed Allure CLI:
    npm install -g allure-commandline --save-dev
 
 ==========================
- Summary
+✅ Summary
 ==========================
 
 - CodeceptJS runs browser automation using Playwright.
