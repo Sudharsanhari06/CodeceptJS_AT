@@ -20,6 +20,24 @@ Scenario('add user', async ({ I }) => {
 
 })
 
+
+Scenario('Invalid user Data', async ({ I }) => {
+    let tableData = {
+        firstname: "sudharsan",
+        lastname: "H",
+        email: "sudharsangmail.com",
+        age: 19,
+        salary: 900,
+        department: 'Automation Testing'
+    }
+    await I.amOnPage('/');
+    await app.gotoTablePage();
+    await table.openForm();
+    await formpage.fillForm(tableData);
+    await formpage.submitForm();
+
+})
+
 // Scenario('edit the form', async ({ I }) => {
 //     let tableData = {
 //         firstname: "Kierra",

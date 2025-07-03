@@ -1,6 +1,6 @@
 
 const { I } = inject();
-
+const assert=require('assert')
 const validator=require('../utils/validation');
 
 const registrationPage = {

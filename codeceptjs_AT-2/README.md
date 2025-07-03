@@ -1,72 +1,108 @@
 # CodeceptJS Automation Project with Playwright and Allure Report
 
-This project automates the UI testing of https://demoqa.com using CodeceptJS with Playwright and generates a report using Allure.
+This project automates UI testing of [demoqa.com](https://demoqa.com) using **CodeceptJS** with **Playwright**, and generates visual test reports using **Allure**.
 
-==========================
-Folder Structure Overview
-==========================
+---
 
-- tests/               → All test files (example: user_test.js)
-- pages/               → Reusable page object files (example: webTablesPage.js)
-- output/              → CodeceptJS test results and logs
-- allure-results/      → Raw test result files for Allure
-- allure-report/       → Final HTML Allure report (auto-generated)
-- codecept.conf.js     → Main configuration file
+## 📁 Folder Structure
 
-==========================
-🛠 Project Setup
-==========================
+```
+├── tests/             → All test scenarios (e.g., user_test.js)
+├── pages/             → Page Object Models (e.g., webTablesPage.js)
+├── output/            → CodeceptJS execution logs and reports
+├── allure-results/    → Raw test result files for Allure
+├── allure-report/     → Generated Allure HTML reports
+├── codecept.conf.js   → CodeceptJS configuration file
+```
 
-1. Clone the repository:
-   git clone  https://github.com/Sudharsanhari06/CodeceptJS_AT.git
-   cd CODECEPTJS_AT
+---
 
-2. Install dependencies:
-   npm install
+##  Project Setup
 
-==========================
-▶️ Run Test Cases
-==========================
+1. **Clone the repository**
 
-To run tests with visible browser:
+```bash
+git clone https://github.com/Sudharsanhari06/CodeceptJS_AT.git
+cd CodeceptJS_AT
+```
 
-   npx codeceptjs run --steps
+2. **Install dependencies**
 
-To run tests in headless mode (without opening browser):
+```bash
+npm install
+```
 
-   HEADLESS=true npx codeceptjs run
+---
 
+## ▶️ Running Tests
 
+### Run all tests with visible browser:
 
-==========================
-📦 Example Test Command
-==========================
+```bash
+npx codeceptjs run --steps
+```
 
-Run specific test file:
+### Run tests in headless mode (no browser UI):
 
-   npx codeceptjs run tests/user_test.js --steps
+```bash
+HEADLESS=true npx codeceptjs run
+```
 
-==========================
-🔁 Reusable Page Code (POM)
-==========================
+---
 
-Put all page-related reusable functions inside the `pages/` folder.
-You can call them from test files for cleaner and structured code.
+##  Example Test Command
 
-==========================
-🛠 Allure CLI Installation (One Time Only)
-==========================
+Run a specific test file:
 
-If you haven’t installed Allure CLI:
+```bash
+npx codeceptjs run tests/user_test.js --steps
+```
 
-   npm install -g allure-commandline --save-dev
+---
 
-==========================
-✅ Summary
-==========================
+## ♻️ Page Object Model (POM)
 
-- CodeceptJS runs browser automation using Playwright.
-- Allure generates a visual test report.
-- Use page objects to organize your test logic.
-- View report using `allure serve` or open the generated folder manually.
+All reusable page methods are placed inside the `pages/` folder.  
+Import and use them in your test files for better structure and maintainability.
 
+Example:
+
+```js
+const tablePage = require('../pages/webTablesPage');
+tablePage.addNewUser();
+```
+
+---
+
+## 📊Allure Reporting
+
+### One-time installation of Allure CLI:
+
+```bash
+npm install -g allure-commandline --save-dev
+```
+
+### Generate Allure report after test execution:
+
+```bash
+allure serve
+```
+
+>  If `allure serve` fails, you can generate and open the report manually:
+
+```bash
+allure generate allure-results --clean -o allure-report
+```
+
+Then open `allure-report/index.html` in your browser.
+
+---
+
+## Summary
+
+- ✅ Built with **CodeceptJS** and **Playwright** for UI test automation  
+- ✅ Uses **Allure** for clean and interactive test reporting  
+- ✅ Follows the **Page Object Model (POM)** design pattern  
+- ✅ Easily configurable via `codecept.conf.js`
+
+---
