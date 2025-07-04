@@ -16,8 +16,7 @@ exports.config = {
       waitForAction: 1000,
       browser: 'chromium',
       url: 'https://inforiverwebtest-premium.azurewebsites.net/?csvLocation=Sanity.csv&config=Sanity.json&URLLoad=true',
-      show: true,
-   
+      show: true
     },
 
   },
